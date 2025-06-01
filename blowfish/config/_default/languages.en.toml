@@ -1,0 +1,34 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Stormvault"
+
+[params]
+displayName = "English"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "img/blowfish_logo_transparent.png"
+description = "A powerful, lightweight theme for Hugo."
+
+  [[params.author]]
+  name = "Stormvault Networks"
+  email = "support@stormvault.net"
+  image = "img/blowfish_logo_transparent.png"
+  headline = "A powerful, lightweight theme for Hugo."
+  bio = "A powerful, lightweight theme for Hugo."
+
+    [[params.author.links]]
+    x = "https://x.com/@StormvaultNet"
+
+    [[params.author.links]]
+    github = "https://github.com/stormvault"
+
+    [[params.author.links]]
+    linkedin = "https://www.linkedin.com/companies/stormvault"
+
+["params.author"]
+name = "Stormvault Networks"
+image = "stormvault_logo_transparent.png"
+headline = "STORMVAULT IS THE BEST"
+bio = "STORMVAULT BIO: WE'RE THE BEST"

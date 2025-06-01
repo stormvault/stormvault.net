@@ -1,0 +1,30 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Stormvault"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "strmvlt-self.png"
+secondaryLogo = "stormvault_lightning_icon_transparent.png"
+description = "Stormvault Networks description"
+copyright = "Copyright Stormvault Networks 2025"
+
+[params.author]
+name = "Stormvault Networks"
+email = "hello@stormvault.net"
+image = "img/blowfish_logo_transparent.png"
+imageQuality = 96
+headline = "I'm only human"
+bio = "A little bit about you"
+links = []
+
+["params.author"]
+name = "Stormvault Networks"
+image = "stormvault_logo_transparent-512x512.png"
+headline = "I'm only human"
+bio = "A little bit about you"

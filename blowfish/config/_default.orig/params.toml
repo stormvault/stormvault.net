@@ -1,0 +1,117 @@
+colorScheme = "blowfish"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = false
+replyByEmail = false
+robots = "robots.txt"
+disableImageOptimization = false
+disableTextInHeader = false
+backgroundImageWidth = 1_200
+defaultBackgroundImage = "background.svg"
+defaultFeaturedImage = "featured.svg"
+giteaDefaultServer = "https://git.fsfe.org"
+forgejoDefaultServer = "https://v8.next.forgejo.org"
+fathomAnalytics = { }
+umamiAnalytics = { }
+selineAnalytics = { }
+buymeacoffee = { }
+verification = { }
+rssnext = { }
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = true
+
+[header]
+layout = "fixed-fill-blur"
+
+[footer]
+showMenu = true
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = true
+showScrollToTop = true
+
+[homepage]
+layout = "background"
+homepageImage = "IMAGE.jpg"
+showRecent = true
+showRecentItems = "5"
+showMoreLink = true
+showMoreLinkDest = "/posts/"
+cardView = true
+cardViewScreenWidth = true
+layoutBackgroundBlur = true
+
+[article]
+showDate = false
+showViews = false
+showLikes = false
+showDateOnlyInArticle = false
+showDateUpdated = false
+showAuthor = true
+showHero = true
+heroStyle = "background"
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true
+showDraftLabel = true
+showEdit = false
+editAppendPath = true
+seriesOpened = false
+showHeadingAnchors = true
+showPagination = true
+invertPagination = false
+showReadingTime = true
+showTableOfContents = false
+showTaxonomies = false
+showAuthorsBadges = false
+showWordCount = true
+showZenMode = false
+
+[list]
+showHero = false
+layoutBackgroundBlur = true
+layoutBackgroundHeaderSpace = true
+showBreadcrumbs = true
+showSummary = false
+showViews = false
+showLikes = false
+showTableOfContents = false
+showCards = true
+orderByWeight = false
+groupByYear = true
+cardView = false
+cardViewScreenWidth = false
+constrainItemsWidth = false
+
+[sitemap]
+excludedKinds = [ "taxonomy", "term" ]
+
+[taxonomy]
+showTermCount = true
+showHero = false
+showBreadcrumbs = false
+showViews = false
+showLikes = false
+showTableOfContents = ""
+cardView = false
+
+[term]
+showHero = false
+showBreadcrumbs = false
+showViews = false
+showLikes = false
+showTableOfContents = true
+groupByYear = false
+cardView = true
+cardViewScreenWidth = false
+
+[firebase]
+apiKey = "AIzaSyDeAqFu9a6W0Z-srfkqRzInesWYKvPZM88"
+authDomain = "stormvault-net.firebaseapp.com"
+projectId = "stormvault-net"
+storageBucket = "stormvault-net.firebasestorage.app"
+messagingSenderId = "285608426622"
+appId = "1:285608426622:web:636892c149ee1117476c2f"
+measurementId = "G-QJFCRFC52R"
