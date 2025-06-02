@@ -1,34 +1,26 @@
+disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
 title = "Stormvault"
 
 [params]
-displayName = "English"
+displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
-logo = "img/blowfish_logo_transparent.png"
-description = "A powerful, lightweight theme for Hugo."
+logo = "stormvault_logo_transparent-512x512.png"
 
-  [[params.author]]
+  [params.author]
+  image = "stormvault_logo.png"
   name = "Stormvault Networks"
-  email = "support@stormvault.net"
-  image = "img/blowfish_logo_transparent.png"
-  headline = "A powerful, lightweight theme for Hugo."
-  bio = "A powerful, lightweight theme for Hugo."
-
-    [[params.author.links]]
-    x = "https://x.com/@StormvaultNet"
-
-    [[params.author.links]]
-    github = "https://github.com/stormvault"
-
-    [[params.author.links]]
-    linkedin = "https://www.linkedin.com/companies/stormvault"
+  email = "nicolas@stormvault.net"
+  imageQuality = 96
+  headline = "Sheltering Brick & Mortar SMBs from Technical Storms."
+  links = [ ]
 
 ["params.author"]
+image = "stormvault_logo_transparent-512x512.png"
 name = "Stormvault Networks"
-image = "stormvault_logo_transparent.png"
-headline = "STORMVAULT IS THE BEST"
-bio = "STORMVAULT BIO: WE'RE THE BEST"
+headline = ""
+bio = ""

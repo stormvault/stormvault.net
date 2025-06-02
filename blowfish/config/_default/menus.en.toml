@@ -11,24 +11,55 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
+ name = "Blog"
+ pageRef = "posts"
+ weight = 10
+
+[[main]]
   name = "Docs"
   pageRef = "docs"
-  weight = 10
+  weight = 15
 
 [[main]]
   name = "Shortcodes"
   pageRef = "docs/shortcodes"
-  weight = 15
+  weight = 20
 
 [[main]]
   name = "Examples"
-  weight = 20
+  weight = 25
 
 [[main]]
   name = "Samples"
   parent = "Examples"
   pageRef = "samples"
-  weight = 16
+  weight = 26
+
+
+[[main]]
+ name = "Services"
+ weight = 20
+
+  [[main]]
+   name = "Enterprise Calls"   # Enterprise Calls: Track. Route. Never Miss.
+   parent = "Services"
+   pageRef = "/services/enterprise-calls"
+   URL = "/services/enterprise-calls"
+   weight = 21
+ 
+  [[main]]
+   name = "Instant Forms"
+   parent = "Services"
+   pageRef = "services/instant-forms"
+   URL = "/services/instant-forms"
+   weight = 22
+
+
+[[main]]
+ name = "Sales"
+ parent = "Support"
+ pageRef = "/support/sales"
+ weight = 23
 
 [[main]]
   name = "Showcase"
@@ -42,26 +73,45 @@
   pageRef = "guides"
   weight = 40
 
-[[main]]
-  name = "Users"
-  pageRef = "users"
-  weight = 90
+# [[main]]
+#   name = "Users"
+#   pageRef = "users"
+#   weight = 60
+
+# [[main]]
+#   name = "Merch"
+#   url = "https://www.teepublic.com/user/blowfish-store/t-shirts"
+#   weight = 70
+
 
 [[main]]
-  name = "Merch"
-  url = "https://www.teepublic.com/user/stormvault-store/t-shirts"
-  weight = 100
+ name = "Support"
+ weight = 80
+
+     [[main]]
+      name = "Help Center"
+      parent = "Support"
+      pageRef = "support/help"
+      URL = "/support/contact"
+      weight = 81
+
+     [[main]]
+      name = "Contact Us"
+      parent = "Support"
+      pageRef = "support/contact"
+      URL = "/support/contact"
+      weight = 82
 
 #[[main]]
 #  name = "Test"
 #  pageRef = "pagTest"
 #  weight = 1000
 
-[[main]]
-  identifier = "twitter"
-  pre = "x-twitter"
-  url = "https://x.com/@StormvaultNet"
-  weight = 200
+# [[main]]
+#   identifier = "twitter"
+#   pre = "x-twitter"
+#   url = "https://twitter.com/burufugu"
+#   weight = 200
 
 #[[main]]
 #  identifier = "mastodon"
@@ -69,11 +119,11 @@
 #  weight = 300
 #  url = "https://masto.ai/@blowfish"
 
-[[main]]
-  identifier = "github"
-  pre = "github"
-  url = "https://github.com/stormvault"
-  weight = 400
+# [[main]]
+#   identifier = "github"
+#   pre = "github"
+#   url = "https://github.com/nunocoracao/blowfish"
+#   weight = 400
 
 
 # -- Footer Menu --
@@ -89,3 +139,5 @@
    name = "Authors"
    pageRef = "authors"
    weight = 20
+
+
