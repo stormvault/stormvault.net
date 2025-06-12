@@ -3,6 +3,7 @@ images
 firebase-*
 firebase*.html
 public.bak
-videos-veo2
-video-veo2
+./videos-veo2
+./video-veo2
+./veo2-videos/
 .env
