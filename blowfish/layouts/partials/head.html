@@ -129,14 +129,15 @@
   {{ partialCached "extend-head.html" .Site }}
   {{ end }}
   <meta name="theme-color"/>
+
   {{/* Firebase */}}
   {{ with $.Site.Params.firebase }}
-  {{ if isset $.Site.Params "firebase" }}
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-performance.js"></script> -->
 
+  <script type="module">
     const firebaseConfig = {
       apiKey: {{ $.Site.Params.firebase.apiKey }},
       authDomain: {{ $.Site.Params.firebase.apiKey }},
@@ -145,13 +146,70 @@
       messagingSenderId: {{ $.Site.Params.firebase.messagingSenderId }},
       appId: {{ $.Site.Params.firebase.appId }},
       measurementId: {{ $.Site.Params.firebase.measurementId }}
-    };
+    }
 
-    var app = firebase.initializeApp(firebaseConfig);
-    var db = firebase.firestore();
-    var auth = firebase.auth();
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth, OAuthProvider } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js'
+    import {
+      trace,
+      getPerformance
+    } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-performance.js'
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics();
+    // https://firebase.google.com/docs/perf-mon/attributes?platform=web#default_attributes
+    const perf = getPerformance();
+
+    // oidc auth
+    const provider = new OAuthProvider('oidc.google');
+    provider.setCustomParameters({
+      // Target specific email with login hint.
+      login_hint: 'user@example.com'
+    });
+
+    provider.addScope('openid');
+    provider.addScope('email');
+    provider.addScope('profile');
+
+    const credential = provider.credential({
+      idToken: idToken,
+    });
+
+    const performance = window.performance;
+    app.signInWithCredential(app.getAuth(), credential).then(
+      (result) => {
+        performance.mark("oidcAuthentication");
+
+        // User is signed in.
+        // IdP data available in result.additionalUserInfo.profile.
+
+        // Get the OAuth access token and ID Token
+        const credential = OAuthProvider.credentialFromResult(result);
+        const accessToken = credential.accessToken;
+        const idToken = credential.idToken;
+
+      }).catch(
+        (error) => {
+          performance.mark("oidcAuthenticationError");
+    });
+    performance.measure("customTraceName", "measurementStart", "measurementStop");
 
   </script>
+
+  {{ if isset $.Site.Params "firebase" }}
+
   {{ end }}
   {{ end }}
 </head>
+
+<!-- Local Variables: -->
+<!-- gptel-model: claude-sonnet-4-20250514 -->
+<!-- gptel--backend-name: "Claude" -->
+<!-- gptel--bounds: nil -->
+<!-- End: -->

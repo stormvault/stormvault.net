@@ -1,21 +1,20 @@
 # Blowfish theme for Hugo
 
-name = "Blowfish"
+name = "Stormvault"
 license = "MIT"
-licenselink = "https://github.com/nunocoracao/blowfish/blob/main/LICENSE"
-description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+licenselink = "https://github.com/stormvault/stormvault.net/"
+escription = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
 
-homepage = "https://github.com/nunocoracao/blowfish/"
-demosite = "https://blowfish.page/"
+homepage = "https://github.com/stormvault/stormvault.net/"
 
 tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
 features = ["syntax highlighting", "dark mode", "emoji", "firebase", "views"]
 
 [author]
-  name = "Nuno Coracao"
-  homepage = "https://n9o.xyz/"
+  name = "Stormvault Networks"
+  homepage = "https://www.stormvault.net/"
 
 [original]
-  author = "James Panther"
-  homepage = "https://jamespanther.com/"
-  repo = "https://github.com/jpanther/congo"
+  name = "Stormvault Networks"
+  homepage = "https://www.stormvault.net/"
+  repo = "https://github.com/stormvault"

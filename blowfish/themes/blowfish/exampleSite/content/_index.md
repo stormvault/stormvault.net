@@ -20,10 +20,10 @@ description: "This page was built using the Blowfish theme for Hugo."
 </div>
 
 
-```node
-npx blowfish-tools
-```  
+<!-- ```node -->
+<!-- npx blowfish-tools -->
+<!-- ```   -->
 
-{{< youtubeLite id="SgXhGb-7QbU" label="Blowfish-tools demo" >}}
+<!-- {{< youtubeLite id="SgXhGb-7QbU" label="Blowfish-tools demo" >}} -->
 
 

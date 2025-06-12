@@ -5,6 +5,31 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+
+    "rewrites": [ {
+      "source": "/api/**",
+      "run": {
+        "serviceId": "apiservice",
+        "region": "northamerica-northeast1",
+        "pinTag": true
+      }
+    } ],
+
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "https://www.stormvault.net/"
+          }
+        ]
+      }
     ]
   }
 }

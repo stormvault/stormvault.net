@@ -375,7 +375,7 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BLOWFISH_TUTORIAL }}'
           expires: 30d
           channelId: preview-${{ github.event.number }}
-          projectId: blowfish-tutorial
+          projectId: 
 ```
 
 
